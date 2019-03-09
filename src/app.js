@@ -15,7 +15,7 @@ app.get('/rss', async (req, res) => {
     rss.getFormattedRSS(req, res);
 });
 
-app.listen(port, err => {
+app.listen(process.env.PORT || port, err => {
     if (err) {
         return console.log('Something weng wrong', err);
     }
