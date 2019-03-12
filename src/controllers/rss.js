@@ -11,6 +11,7 @@ const getFormattedRSS = async (req, res) => {
         cacheManager.setCachedData('jsonRss', rss);
     }
 
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.send(rss);
 }
 
